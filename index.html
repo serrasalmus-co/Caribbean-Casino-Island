@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Margarita Gold | Institutional Asset</title>
+<style>
+  body { margin:0; font-family: 'Helvetica Neue', Arial, sans-serif; background:#0b0f14; color:#fff; }
+  .container { max-width:800px; margin:0 auto; padding:60px 20px; }
+  h1 { font-size:34px; color:#d4af37; margin-bottom:10px; }
+  h2 { font-size:20px; font-weight:300; color:#ccc; margin-bottom:40px; }
+  .box { background:#151b22; padding:30px; border-radius:8px; border:1px solid #333; }
+  ul { line-height:1.8; color:#ddd; }
+  form { margin-top:30px; }
+  input, select { width:100%; padding:12px; margin:8px 0 20px; border:1px solid #444; border-radius:4px; background:#0b0f14; color:#fff; box-sizing: border-box; }
+  button { background:#d4af37; color:#000; padding:14px 30px; border:none; font-size:16px; font-weight:bold; cursor:pointer; border-radius:4px; width: 100%; }
+  button:hover { background:#b5952f; }
+  button:disabled { background:#555; cursor:not-allowed; }
+  footer { text-align:center; margin-top:40px; font-size:12px; color:#666; }
+  
+  /* Contenedores de estado Formspree */
+  [data-fs-success] { color: #28a745; font-weight: bold; margin-bottom: 15px; }
+  [data-fs-error] { color: #dc3545; font-size: 13px; display: block; margin-top: -15px; margin-bottom: 15px; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Prime Caribbean Beachfront Development</h1>
+  <h2>27,500 sqm – Institutional Grade | Off-Market</h2>
+  
+  <div class="box">
+    <ul>
+      <li><strong>Scale:</strong> 27,500 sqm flat beachfront, buildable.</li>
+      <li><strong>Zoning:</strong> AR-14 / C2 – Ultra-luxury resort + gaming permitted.</li>
+      <li><strong>Legal:</strong> Consolidated title, permits in standing.</li>
+      <li><strong>Structure:</strong> Fractional ownership via security token available for qualified investors.</li>
+      <li><strong>Appraisal:</strong> $13.6M Certified.</li>
+    </ul>
+
+    <!-- Mensajes generales de estado -->
+    <div data-fs-success></div>
+    <div data-fs-error></div>
+
+    <form id="investment-form" action="https://formspree.io/f/xojgokln" method="POST">
+      <input type="text" name="FullName" placeholder="Full Name" required data-fs-field />
+      <span data-fs-error="FullName"></span>
+
+      <input type="text" name="Entity" placeholder="Entity / Family Office Name" required data-fs-field />
+      <span data-fs-error="Entity"></span>
+
+      <input type="email" name="Email" placeholder="Corporate Email" required data-fs-field />
+      <span data-fs-error="Email"></span>
+
+      <select name="TicketSize" required data-fs-field>
+        <option value="">Ticket Size (Min $1M)</option>
+        <option value="1-5M">$1M - $5M</option>
+        <option value="5-10M">$5M - $10M</option>
+        <option value="10M+">$10M+</option>
+      </select>
+      <span data-fs-error="TicketSize"></span>
+
+      <button type="submit" data-fs-submit-btn>Request Private Teaser & Whitelist</button>
+    </form>
+  </div>
+  <footer>Dewit Broker Limited – APAC Desk | Confidential</footer>
+</div>
+
+<!-- SDK Formspree AJAX -->
+<script>
+  window.formspree = window.formspree || function () { (formspree.q = formspree.q || []).push(arguments); };
+  formspree('initForm', { formElement: '#investment-form', formId: 'xojgokln' });
+</script>
+<script src="https://unpkg.com/@formspree/ajax@1" defer></script>
+
+</body>
+</html>
