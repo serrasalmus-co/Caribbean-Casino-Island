@@ -1,0 +1,7 @@
+@media (max-width: 850px) {
+  .grid-2 { grid-template-columns: 1fr; gap: 2rem; }
+  .metrics-grid { grid-template-columns: 1fr; }
+  .form-grid { grid-template-columns: 1fr; }
+  .field-group.span-2 { grid-column: span 1; }
+  .nav-links { display: none; }
+}
